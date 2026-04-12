@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0B0E14;
+  --foreground: #ffffff;
+  
+  --primary: #00D2FF;
+  --primary-foreground: #000000;
+  
+  --secondary: #9D50BB;
+  --secondary-foreground: #ffffff;
+  
+  --success: #2BB673;
+  --success-foreground: #ffffff;
+  
+  --warning: #F5A623;
+  --warning-foreground: #000000;
+  
+  --danger: #FF3B30;
+  --danger-foreground: #ffffff;
+  
+  --surface: rgba(255, 255, 255, 0.03);
+  --surface-border: rgba(255, 255, 255, 0.1);
+  --surface-foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  
+  --color-surface: var(--surface);
+  --color-surface-border: var(--surface-border);
+  --color-surface-foreground: var(--surface-foreground);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  @apply antialiased;
+}
+
+.glass-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.glow-primary {
+  box-shadow: 0 0 30px 5px rgba(0, 210, 255, 0.2);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 30px 5px rgba(157, 80, 187, 0.2);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
