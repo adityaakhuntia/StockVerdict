@@ -4,6 +4,17 @@
 
 ---
 
+## 📖 Project Overview
+
+**StockVerdict** is more than just a stock tracker; it is a full-stack financial analysis tool designed to bridge the gap between raw market data and actionable insights. The project was born from the need for a "cleaner" way to visualize stock volatility while providing a definitive "Verdict" based on technical indicators.
+
+### 🧠 The Core Logic
+The application uses a **hybrid architecture** to handle different types of tasks:
+* **The Frontend (The Face):** Built with **Next.js 15**, the dashboard focuses on low-latency data rendering. We use **Glassmorphism design principles** to keep the UI modern and focused, ensuring that complex financial data doesn't feel overwhelming.
+* **The Backend (The Brain):** A specialized **Python environment** handles the heavy lifting. By utilizing Python's robust financial libraries (like `yfinance` or `pandas`), the backend processes historical data to generate the "Score" you see in the frontend's **ScoreGauge**.
+
+---
+
 ## ✨ Key Features
 
 * **Intelligent Verdicts:** Real-time scoring system using custom logic to evaluate stock health.
@@ -14,28 +25,39 @@
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
-### Frontend
-- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
-- **Styling:** Tailwind CSS (with custom Glassmorphism)
-- **Animations:** Framer Motion
-- **Icons:** Lucide React
+### Frontend 💻
+| Technology | Usage |
+| :--- | :--- |
+| **Next.js 15** | Core Framework (App Router & Server Components) |
+| **TypeScript** | Strict type-safety and scalable architecture |
+| **Tailwind CSS** | Responsive Styling & Glassmorphism effects |
+| **Framer Motion** | Fluid UI animations and background effects |
+| **Lucide Icons** | Professional, consistent iconography |
 
-### Backend
-- **Language:** Python 3.11
-- **Scripts:** `main.py`, `test_chart.py`, `test_search.py`
-- **Data Management:** Requirements handled via `requirements.txt`
+### Backend 🧠
+| Technology | Usage |
+| :--- | :--- |
+| **Python 3.11** | High-level data processing and financial logic |
+| **Modular Testing** | Separate scripts for Search (`test_search.py`) & Charting (`test_chart.py`) |
+| **Requirements** | Managed environment for financial library dependencies |
+
+### UI Components 🎨
+- **BackgroundOrbs:** Dynamic animated background elements for a modern feel.
+- **ScoreGauge:** Custom SVG-based financial health indicator.
+- **GlassCard:** Specialized high-contrast containers for data visualization.
+- **Custom Cursor:** Enhanced user interaction tracking for a premium feel.
 
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v18 or higher)
-- Python 3.11+
+- **Node.js** (v18 or higher)
+- **Python** (3.11+)
 
-### Installation
+### Installation & Setup
 
 1. **Clone the repository:**
    ```bash
