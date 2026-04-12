@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📈 StockVerdict
 
-## Getting Started
+**StockVerdict** is a high-performance financial dashboard designed to provide instant clarity on stock market data. By combining a sleek, glassmorphic React frontend with a specialized Python backend, it delivers real-time analysis, interactive charting, and automated stock "verdicts."
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* **Intelligent Verdicts:** Real-time scoring system using custom logic to evaluate stock health.
+* **Interactive Visualizations:** Dynamic price action charts built with high-performance UI components.
+* **Sleek UI/UX:** A modern, dark-themed dashboard featuring glassmorphism, animated background orbs, and a custom-designed cursor.
+* **Hybrid Architecture:** Seamless integration between a Next.js 15 frontend and a Python-based data processing backend.
+* **Stock Comparison:** Tools to analyze multiple tickers side-by-side to identify market leaders.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+### Frontend
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling:** Tailwind CSS (with custom Glassmorphism)
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
 
-To learn more about Next.js, take a look at the following resources:
+### Backend
+- **Language:** Python 3.11
+- **Scripts:** `main.py`, `test_chart.py`, `test_search.py`
+- **Data Management:** Requirements handled via `requirements.txt`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Getting Started
 
-## Deploy on Vercel
+### Prerequisites
+- Node.js (v18 or higher)
+- Python 3.11+
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/adityaakhuntia/StockVerdict.git](https://github.com/adityaakhuntia/StockVerdict.git)
+   cd StockVerdict
