@@ -1,65 +1,151 @@
 # 📈 StockVerdict
 
-**StockVerdict** is a high-performance financial dashboard designed to provide instant clarity on stock market data. By combining a sleek, glassmorphic React frontend with a specialized Python backend, it delivers real-time analysis, interactive charting, and automated stock "verdicts."
+> A high-performance, real-time stock analysis platform that delivers clear **BUY / HOLD / AVOID** decisions using a custom rule-based scoring engine.
+
+![Next.js](https://img.shields.io/badge/Next.js_15-black?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer&logoColor=white)
 
 ---
 
-## 📖 Project Overview
+## 🧠 Overview
 
-**StockVerdict** is more than just a stock tracker; it is a full-stack financial analysis tool designed to bridge the gap between raw market data and actionable insights. The project was born from the need for a "cleaner" way to visualize stock volatility while providing a definitive "Verdict" based on technical indicators.
+StockVerdict transforms complex stock market data into simple, actionable insights.
+Users can search any stock ticker and instantly receive:
 
-### 🧠 The Core Logic
-The application uses a **hybrid architecture** to handle different types of tasks:
-* **The Frontend (The Face):** Built with **Next.js 15**, the dashboard focuses on low-latency data rendering. We use **Glassmorphism design principles** to keep the UI modern and focused, ensuring that complex financial data doesn't feel overwhelming.
-* **The Backend (The Brain):** A specialized **Python environment** handles the heavy lifting. By utilizing Python's robust financial libraries (like `yfinance` or `pandas`), the backend processes historical data to generate the "Score" you see in the frontend's **ScoreGauge**.
+- A **0–100 score**
+- A clear **BUY / HOLD / AVOID** verdict
+- Interactive price trend visualizations
+
+The platform focuses on **speed, clarity, and usability**, making stock evaluation faster and more accessible.
 
 ---
 
 ## ✨ Key Features
 
-* **Intelligent Verdicts:** Real-time scoring system using custom logic to evaluate stock health.
-* **Interactive Visualizations:** Dynamic price action charts built with high-performance UI components.
-* **Sleek UI/UX:** A modern, dark-themed dashboard featuring glassmorphism, animated background orbs, and a custom-designed cursor.
-* **Hybrid Architecture:** Seamless integration between a Next.js 15 frontend and a Python-based data processing backend.
-* **Stock Comparison:** Tools to analyze multiple tickers side-by-side to identify market leaders.
+- 🎯 **Rule-Based Verdict System** — Combines price trends and momentum signals into a single actionable score
+- ⚡ **Real-Time Data Integration** — Fetches and processes live market data from external APIs (Stooq / yfinance)
+- 📊 **Interactive Visualizations** — Clean and responsive charts via Recharts for price trend analysis
+- 🔍 **Dynamic Stock Search** — Supports both predefined and user-input tickers
+- 🎨 **Modern UI/UX** — Glassmorphic design with smooth Framer Motion animations
+- 🧩 **Custom UI Components:**
+  - `ScoreGauge` — SVG-based score visualization
+  - `GlassCard` — reusable glassmorphic container
+  - `BackgroundOrbs` — animated ambient background
 
 ---
 
-## 🛠 Tech Stack
+## 🏗️ Architecture
+┌─────────────────────────────────┐
+│   Frontend (Next.js 15 + TS)    │
+│   App Router · Tailwind · Recharts │
+└──────────────┬──────────────────┘
+│ REST API (HTTP)
+┌──────────────▼──────────────────┐
+│   Backend (FastAPI + Python)    │
+└──────────────┬──────────────────┘
+│
+┌──────────────▼──────────────────┐
+│  External APIs (Stooq / yfinance)│
+│  CSV parsing · data transform   │
+└──────────────┬──────────────────┘
+│
+┌──────────────▼──────────────────┐
+│  Processed Data → Charts + Verdict│
+└─────────────────────────────────┘
 
-### Frontend 💻
-| Technology | Usage |
-| :--- | :--- |
-| **Next.js 15** | Core Framework (App Router & Server Components) |
-| **TypeScript** | Strict type-safety and scalable architecture |
-| **Tailwind CSS** | Responsive Styling & Glassmorphism effects |
-| **Framer Motion** | Fluid UI animations and background effects |
-| **Lucide Icons** | Professional, consistent iconography |
+---
 
-### Backend 🧠
-| Technology | Usage |
-| :--- | :--- |
-| **Python 3.11** | High-level data processing and financial logic |
-| **Modular Testing** | Separate scripts for Search (`test_search.py`) & Charting (`test_chart.py`) |
-| **Requirements** | Managed environment for financial library dependencies |
+## 🛠️ Tech Stack
 
-### UI Components 🎨
-- **BackgroundOrbs:** Dynamic animated background elements for a modern feel.
-- **ScoreGauge:** Custom SVG-based financial health indicator.
-- **GlassCard:** Specialized high-contrast containers for data visualization.
-- **Custom Cursor:** Enhanced user interaction tracking for a premium feel.
+### Frontend
+| Technology | Purpose |
+|---|---|
+| Next.js 15 (App Router) | Core framework |
+| TypeScript | Type-safe frontend logic |
+| Tailwind CSS | Styling and glassmorphism |
+| Framer Motion | Animations and transitions |
+| Recharts | Price trend visualizations |
+
+### Backend
+| Technology | Purpose |
+|---|---|
+| FastAPI | REST API server |
+| Python 3.11 | Data processing and scoring logic |
+| Stooq / yfinance | Real-time market data sources |
+
+---
+
+## 📁 Project Structure
+StockVerdict/
+│
+├── src/
+│   ├── app/              # Next.js App Router pages
+│   └── components/       # ScoreGauge, GlassCard, BackgroundOrbs
+│
+├── backend/
+│   └── main.py           # FastAPI entry point + scoring engine
+│
+├── public/               # Static assets
+├── package.json
+├── tsconfig.json
+└── README.md
 
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- **Node.js** (v18 or higher)
-- **Python** (3.11+)
+- Node.js v18+
+- Python 3.11+
 
-### Installation & Setup
+### Clone
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/adityaakhuntia/StockVerdict.git](https://github.com/adityaakhuntia/StockVerdict.git)
-   cd StockVerdict
+```bash
+git clone https://github.com/adityaakhuntia/StockVerdict.git
+cd StockVerdict
+```
+
+### Frontend
+
+```bash
+npm install
+npm run dev
+```
+
+Runs at `http://localhost:3000`
+
+### Backend
+
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+
+Runs at `http://localhost:8000`
+
+---
+
+## 🔮 Planned Improvements
+
+- [ ] Advanced technical indicators (RSI, MACD)
+- [ ] Multi-stock comparison dashboard
+- [ ] Live deployment (Vercel + Render)
+- [ ] Enhanced scoring with more market signals
+
+---
+
+## 📄 License
+
+MIT License — see [LICENSE](LICENSE) for details.
+
+---
+
+<div align="center">
+Built by <a href="https://github.com/adityaakhuntia">Aditya Khuntia</a> ·
+<a href="https://linkedin.com/in/adityakhuntia">LinkedIn</a>
+</div>
