@@ -1,4 +1,4 @@
-# 📈 StockVerdict
+# 📈 StockVerdict 
 
 A full-stack web application that analyzes real-time stock data and provides clear **BUY / HOLD / AVOID** decisions using a custom scoring system.
 
