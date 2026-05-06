@@ -1,120 +1,134 @@
-📈 StockVerdict
-🚀 Real-Time Stock Analysis Platform with Actionable Investment Insights
+# 📈 StockVerdict
 
-Transforming complex market data into clear, instant BUY / HOLD / AVOID decisions using a high-performance scoring engine.
+A full-stack web application that analyzes real-time stock data and provides clear **BUY / HOLD / AVOID** decisions using a custom scoring system.
 
-🌐 Live Demo
-🔗 https://stock-verdict.vercel.app
+---
 
-🧠 Overview
+## 🌐 Live Demo
 
-StockVerdict is a full-stack web application that simplifies stock analysis by converting real-time market data into clear, actionable investment insights.
+[https://stock-verdict.vercel.app](https://stock-verdict.vercel.app)
 
-Instead of overwhelming users with raw data, the platform delivers:
+---
 
-🎯 A quantified score (0–100)
-📊 Interactive price trend visualizations
-💡 A clear BUY / HOLD / AVOID verdict
+## 🧠 Overview
 
-Designed with a focus on speed, clarity, and usability, it enables faster and more confident decision-making.
+StockVerdict simplifies stock analysis by transforming real-time market data into concise, actionable insights.
 
-✨ Key Features
-⚡ Real-Time Data Integration
-Fetches and processes live market data using Stooq / yFinance APIs
+Users can:
 
-🎯 Custom Rule-Based Scoring Engine
-Combines price trends and momentum signals into a single actionable score
+* View a **score (0–100)** representing stock strength
+* Analyze **price trends through charts**
+* Get a clear **investment verdict**
 
-📊 Interactive Visualizations
-Clean and responsive charts built with Recharts
+The application focuses on **clarity, speed, and usability**, making stock evaluation efficient and accessible.
 
-🔍 Dynamic Stock Search
-Supports both predefined and user-input stock tickers
+---
 
-🎨 Modern UI/UX
-Glassmorphic design with smooth animations using Framer Motion
+## ✨ Features
 
-🧩 Reusable Component Architecture
-ScoreGauge → SVG-based score visualization
-GlassCard → reusable UI container
-BackgroundOrbs → animated ambient background
+* Real-time stock data integration (yFinance / Stooq)
+* Rule-based scoring system for decision making
+* Interactive price charts
+* Dynamic stock search
+* Responsive and modern UI
 
-🏗️ Architecture
-Frontend (Next.js + TypeScript)
+---
+
+## 🏗️ Architecture
+
+```
+Frontend (Next.js)
         ↓
      REST API
         ↓
-Backend (FastAPI + Python)
+Backend (FastAPI)
         ↓
-External APIs (Stooq / yFinance)
-        ↓
-Processed Data → Score + Charts + Verdict
+External APIs (yFinance / Stooq)
+```
 
-🛠️ Tech Stack
-Frontend
-Next.js 15 (App Router)
-TypeScript
-Tailwind CSS
-Framer Motion
-Recharts
+---
 
-Backend
-FastAPI
-Python 3.11
-yFinance / Stooq APIs
+## 🛠️ Tech Stack
 
-Deployment
-Vercel (Frontend)
-Render (Backend)
+**Frontend**
 
-📁 Project Structure
+* Next.js (App Router)
+* TypeScript
+* Tailwind CSS
+* Recharts
+
+**Backend**
+
+* FastAPI
+* Python
+
+**Deployment**
+
+* Vercel (Frontend)
+* Render (Backend)
+
+---
+
+## 📁 Project Structure
+
+```
 StockVerdict/
-│
 ├── src/
-│   ├── app/              # Next.js routes
-│   └── components/       # UI components
-│
+│   ├── app/
+│   └── components/
 ├── backend/
-│   └── main.py           # FastAPI server + scoring logic
-│
-├── public/               # Static assets
+│   └── main.py
+├── public/
 └── README.md
+```
 
-🚀 Getting Started
-1️⃣ Clone the Repository
+---
+
+## 🚀 Getting Started
+
+### Clone the repository
+
+```bash
 git clone https://github.com/adityaakhuntia/StockVerdict.git
 cd StockVerdict
-2️⃣ Run Frontend
+```
+
+### Run frontend
+
+```bash
 npm install
 npm run dev
+```
 
-Runs at: http://localhost:3000
+### Run backend
 
-3️⃣ Run Backend
+```bash
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
+```
 
-Runs at: http://localhost:8000
+---
 
-📈 Future Improvements
-📊 Advanced indicators (RSI, MACD)
-📉 Multi-stock comparison dashboard
-🤖 ML-based prediction models
-🔐 User authentication & watchlist
+## 📈 Future Improvements
 
-💼 Why This Project Stands Out
-Demonstrates full-stack development (Next.js + FastAPI)
-Integrates real-time external APIs
-Implements custom data processing & scoring logic
-Deployed on production cloud platforms (Vercel + Render)
-Focuses on performance, usability, and clean UI design
-👨‍💻 Author
+* Add advanced indicators (RSI, MACD)
+* Multi-stock comparison
+* Machine learning-based predictions
+* User authentication and watchlist
+
+---
+
+## 👨‍💻 Author
 
 Aditya Khuntia
 
-🔗 GitHub: https://github.com/adityaakhuntia
-🔗 LinkedIn: https://linkedin.com/in/adityakhuntia
-📄 License
+* [https://github.com/adityaakhuntia](https://github.com/adityaakhuntia)
+* [https://linkedin.com/in/adityakhuntia](https://linkedin.com/in/adityakhuntia)
+
+---
+
+## 📄 License
 
 MIT License
+
