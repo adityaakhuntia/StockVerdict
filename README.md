@@ -4,7 +4,6 @@
 Transforming complex market data into clear, instant BUY / HOLD / AVOID decisions using a high-performance scoring engine.
 
 🌐 Live Demo
-
 🔗 https://stock-verdict.vercel.app
 
 🧠 Overview
@@ -22,18 +21,24 @@ Designed with a focus on speed, clarity, and usability, it enables faster and mo
 ✨ Key Features
 ⚡ Real-Time Data Integration
 Fetches and processes live market data using Stooq / yFinance APIs
+
 🎯 Custom Rule-Based Scoring Engine
 Combines price trends and momentum signals into a single actionable score
+
 📊 Interactive Visualizations
 Clean and responsive charts built with Recharts
+
 🔍 Dynamic Stock Search
 Supports both predefined and user-input stock tickers
+
 🎨 Modern UI/UX
 Glassmorphic design with smooth animations using Framer Motion
+
 🧩 Reusable Component Architecture
 ScoreGauge → SVG-based score visualization
 GlassCard → reusable UI container
 BackgroundOrbs → animated ambient background
+
 🏗️ Architecture
 Frontend (Next.js + TypeScript)
         ↓
@@ -44,6 +49,7 @@ Backend (FastAPI + Python)
 External APIs (Stooq / yFinance)
         ↓
 Processed Data → Score + Charts + Verdict
+
 🛠️ Tech Stack
 Frontend
 Next.js 15 (App Router)
@@ -51,13 +57,16 @@ TypeScript
 Tailwind CSS
 Framer Motion
 Recharts
+
 Backend
 FastAPI
 Python 3.11
 yFinance / Stooq APIs
+
 Deployment
 Vercel (Frontend)
 Render (Backend)
+
 📁 Project Structure
 StockVerdict/
 │
@@ -70,6 +79,7 @@ StockVerdict/
 │
 ├── public/               # Static assets
 └── README.md
+
 🚀 Getting Started
 1️⃣ Clone the Repository
 git clone https://github.com/adityaakhuntia/StockVerdict.git
@@ -92,6 +102,7 @@ Runs at: http://localhost:8000
 📉 Multi-stock comparison dashboard
 🤖 ML-based prediction models
 🔐 User authentication & watchlist
+
 💼 Why This Project Stands Out
 Demonstrates full-stack development (Next.js + FastAPI)
 Integrates real-time external APIs
