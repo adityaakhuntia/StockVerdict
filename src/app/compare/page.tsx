@@ -51,7 +51,8 @@ export default function ComparePage() {
     setIsSearching(true);
     const timer = setTimeout(async () => {
       try {
-        const res = await fetch(`http://127.0.0.1:8000/search/${query}`);
+        const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+        const res = await fetch(`${API_URL}/search/${query}`);
         if (res.ok) {
           const data = await res.json();
           setResults(data);
@@ -75,7 +76,8 @@ export default function ComparePage() {
       }
       setLoading(true);
       try {
-        const promises = selectedTickers.map(t => fetch(`http://127.0.0.1:8000/stock/${t}`).then(res => res.json()));
+        const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+        const promises = selectedTickers.map(t => fetch(`${API_URL}/stock/${t}`).then(res => res.json()));
         const results = await Promise.all(promises);
         setStockData(results);
       } catch (err) {

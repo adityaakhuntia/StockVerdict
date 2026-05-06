@@ -8,7 +8,7 @@ app = FastAPI()
 # ✅ CORS (for frontend connection)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["*"], # In production, you can replace this with your Vercel URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -145,3 +145,4 @@ def get_stock(ticker: str):
             "chartData": [],
             "error": "Failed to fetch stock data: " + str(e)
         }
+        

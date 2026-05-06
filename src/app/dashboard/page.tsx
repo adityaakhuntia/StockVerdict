@@ -50,8 +50,9 @@ function DashboardContent() {
   const [categories, setCategories] = useState<Categories | null>(null);
 
   useEffect(() => {
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
     // Fetch categories and initial stock data
-    fetch("http://127.0.0.1:8000/stocks/categories")
+    fetch(`${API_URL}/stocks/categories`)
       .then(res => res.json())
       .then(d => setCategories(d))
       .catch(console.error);
@@ -59,10 +60,11 @@ function DashboardContent() {
 
   useEffect(() => {
     async function fetchStock() {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
       setLoading(true);
       setError(null);
       try {
-        const res = await fetch(`http://127.0.0.1:8000/stock/${initialTicker}`);
+        const res = await fetch(`${API_URL}/stock/${initialTicker}`);
         if (!res.ok) {
           const errData = await res.json();
           throw new Error(errData.detail || "Stock not found");
